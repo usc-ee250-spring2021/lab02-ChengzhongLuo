@@ -47,7 +47,7 @@ import time,sys
 
 if sys.platform == 'uwp':
     import winrt_smbus as smbus
-    bus = smbus.SMBus(1) 
+    bus = smbus.SMBus(1)
 else:
     import smbus
     import RPi.GPIO as GPIO

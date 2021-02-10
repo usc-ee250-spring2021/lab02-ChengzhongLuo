@@ -45,6 +45,6 @@ while True:
         print(grovepi.ultrasonicRead(ultrasonic_ranger))
 
     except TypeError:
-        print ("Error")
+        print ("TypeError")
     except IOError:
-        print ("Error")
+        print ("IOError")
