@@ -36,18 +36,17 @@ if __name__ == '__main__':
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
-        time.sleep(0.5)
+        time.sleep(0.2)
 
         distance = grovepi.ultrasonicRead(PORT)
-        print(grovepi.ultrasonicRead(PORT))
-        #read value from potentiometer
+        #read value from potentiometer [0,1023]
         rotary_value = int(grovepi.analogRead(potentiometer))
-        #Calculate threshold distance
-        threshold = int(rotary_value / 1024 * 300)
+        #Calculate threshold distance [0,517]
+        threshold = int(rotary_value /1023 *517)
         #
         if (threshold >= distance ):
-        #print on lcd
-            setText(str(threshold) + "cm" + "  OBJ PRES \n" + str(distance) + "cm")
+        #print on lcd without freshing
+            setText_norefresh(str(threshold) + "cm" + "  OBJ PRES \n" + str(distance) + "cm")
         else:
-            setText(str(threshold) + "cm" + "\n" + str(distance) + "cm")
+            setText_norefresh(str(threshold) + "cm" + "          \n" + str(distance) + "cm")
 
