@@ -1,8 +1,11 @@
 """ EE 250L Lab 02: GrovePi Sensors
 List team members here.
+Chengzhong Luo
 
 Insert Github repository link here.
-"""
+https://github.com/usc-ee250-spring2021/lab02-ChengzhongLuo/blob/lab02/ee250/lab02/grovepi_sensors.py
+usc-ee250-spring2021/lab02-ChengzhongLuo/ee250/lab02/grovepi_sensors.py
+""" 
 
 """python3 interpreters in Ubuntu (and other linux distros) will look in a 
 default set of directories for modules when a program tries to `import` one. 
